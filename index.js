@@ -13,6 +13,10 @@ ConnectDB()
 
 const port = process.env.port || 8000
 
+app.get('/', (req, res) => {
+  res.send("Backend is running successfully!");
+});
+
 app.use("/api/v1/data/", DataRoutes)
 
 app.listen(port,()=>console.log("Connected"));
